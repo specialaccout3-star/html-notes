@@ -1,0 +1,118 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+  color: #ffffff;
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1de949; /* Yellow Gold on hover */
+  
+}
+a {
+  position: relative;
+  display: inline-block;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #f6c445;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #72fa93; /* Neon Green */
+}
+
+p {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #a0e548; /* Lime Green */
+}
+
+hr {
+  height: 5px;
+  margin: 40px 0;
+}
+
+img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+img:hover {
+  filter: blur(0);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #9ac1f0, #a0e548);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#backToTop:hover {
+  background: linear-gradient(45deg, #e45f2b, #0fce65);
+}
+
+.spacer {
+  height: 1000px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
