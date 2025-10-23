@@ -1,56 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Anchor Link</title>
-  <style>
-    *{
-        background-color: black;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anchor Link with Video Background</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    img {
-      max-width: auto;
-      display: block;
-      margin: 50px auto;
-    }
+  <body>
+    <!-- Background Video -->
+    <video id="video" autoplay muted loop>
+      <source src="VIDEO/cat-pilot-in-ufo-abducting-a-slime-in-space-moewalls-com.mp4" type="video/mp4" />
+    </video>
+    <!-- Background Video -->
 
-    .spacer {
-      height: 1000px; /* Just to create scroll effect */
-    }
+    <!-- Content with Anchor Links -->
+    <div class="content">
+      <h2>
+        <a
+          title="US MAIN QUOTES LGANY HAIN JIS MAIN SAPCE YA SPECIAL CHARACTER HO ETC ETC"
+          href="#Html-Attribiutes"
+        >
+          HTML ATTRIBUTES
+        </a>
+      </h2>
+      <h2>
+        <a
+          title="Agar value ke andar double quotes already ho, toh single quotes bahar use karo ✅"
+          href="#Quotes"
+          >Quotes
+        </a>
+      </h2>
+      <h2>
+        <a title="ATTRIBUTES KI SARI SUMMARY" href="#SUMMARY">
+          HTML ATTRIBUTES
+        </a>
+      </h2>
+      <h2>
+        <a
+          title="AGR KISI BHI WORD KO AS IT IS LIKHNA HO TO PRE ELEMENT USE HOTA HAI H₂O JASY YE "
+          href="#PRE ELEMENT"
+        >
+          PRE ELEMENT
+        </a>
+      </h2>
+      <h2>
+        <a title="kisi bhi element k border ko color krna " href="#border">
+          BORDER COLOR
+        </a>
+      </h2>
 
-    html {
-      scroll-behavior: smooth; /* Enables smooth scrolling */
-    }
-    a{
-        color: brown;
-    }
-  </style>
-</head>
-<body>
+      <p>
+        <a target="_blank" title="Pdf " href="/DOCUMENTS/htmlcheatsheet.pdf">
+          HTML CHEATSHEET
+        </a>
+      </p>
+      <hr />
+      <!-- list section -->
+      <h2><a href="#order-list"> ORDER LIST </a></h2>
+      <h2>
+        <a
+          title="list k andr hi nest krni hai dusri list "
+          href="#nesting-list"
+        >
+          NESTING LIST
+        </a>
+      </h2>
+      <h2>
+        <a href="https://htmltable.com" target="_blank">
+          HTML TABLE GENERATOR
+        </a>
+      </h2>
+    </div>
 
-  <!-- Clickable Heading -->
-  <h2><a  title="US MAIN QUOTES LGANY HAIN JIS MAIN SAPCE YA SPECIAL CHARACTER HO ETC ETC"    href="#Html-Attribiutes"> ʜᴛᴍʟ ᴀᴛᴛʀɪʙᴜᴛᴇꜱ </a></h2>
-  
-  <!-- Clickable Heading -->
-  <h2><a  title="Agar value ke andar double quotes already ho, toh single quotes bahar use karo ✅"    href="#Quotes">Quotes  </a></h2>
+    <div class="spacer"></div>
+    <!-- Space to scroll -->
 
-  <div class="spacer"></div> <!-- So there's space to scroll -->
+    <!-- Target Image -->
+    <img src="images/HTML ATTRIBUTES.png" alt="" id="Html-Attribiutes" />
 
-  <!-- Target Image -->
-  <img src="images/HTML ATTRIBUTES.png" alt="" id="Html-Attribiutes">
+    <div class="spacer"></div>
+    <!-- Space to scroll -->
 
-  <div class="spacer"></div> <!-- So there's space to scroll -->
+    <!-- Target Image -->
+    <img src="images/Quotes.png" alt="" id="Quotes" />
 
-  <!-- Target Image -->
-  <img src="images/Quotes.png" alt="" id="Quotes">
-</body>
+    <!-- Target Image -->
+    <img src="images/ATTRIBUTES SUMMARY.jpg" alt="" id="SUMMARY" />
+
+    <div class="spacer"></div>
+    <!-- Space to scroll -->
+
+    <!-- Target Image -->
+    <img src="images/Pre Element.jpg" alt="" id="PRE ELEMENT" />
+
+    <div class="spacer"></div>
+    <!-- Space to scroll -->
+
+    <!-- Target Image -->
+    <img src="images/border color.jpg" alt="" id="border" />
+
+    <div class="spacer"></div>
+    <img src="images/Html lists.jpg" alt="" id="order-list" />
+
+    <div class="spacer"></div>
+
+    <img src="images/nested lists.jpg" alt="" id="nesting-list" />
+
+    <div class="spacer"></div>
+    <!-- Space to scroll -->
+    <script>
+      // Page load hone par scroll position ko top pe set karna
+      window.onload = function () {
+        window.scrollTo(0, 0); // Scroll ko top pe reset karna
+      };
+
+      // Back to Top Button logic
+      const backToTopButton = document.createElement("button");
+      backToTopButton.id = "backToTop";
+      backToTopButton.innerText = "Back to Top";
+      document.body.appendChild(backToTopButton);
+
+      // Show the button when user scrolls down 100px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          backToTopButton.style.display = "block"; // Show button
+        } else {
+          backToTopButton.style.display = "none"; // Hide button
+        }
+      };
+
+      // Scroll to top when button is clicked
+      backToTopButton.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
+  </body>
 </html>
-
-
-
-
-
